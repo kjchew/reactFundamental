@@ -14,15 +14,9 @@ export default class App extends React.Component{
         this.addUser = this.addUser.bind(this)
 
     }
-    addUser(evt){
-        let user = {
-            name: 'Tom',
-            age: 18,
-            bio: 'Enjoys badminton',
-            hobbies: ['badminton', 'basketball']
-        }
+    addUser(newProfile){
         this.setState({
-            profiles: this.state.profiles.concat([user])
+            profiles: this.state.profiles.concat([newProfile])
         })
     }
 

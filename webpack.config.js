@@ -15,7 +15,7 @@ var config = {
   devServer: {
     inline: true,
     contentBase: BUILD_DIR,
-    port: 3333
+    port: 3334
   },
   module: {
     loaders: [
@@ -30,7 +30,7 @@ var config = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({minimize: true})
+    //new webpack.optimize.UglifyJsPlugin({minimize: true})
   ]
 }
 module.exports = config

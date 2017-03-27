@@ -26,7 +26,9 @@ class Comp1 extends React.Component{
         return (
             <div>
                 <p>Comp1</p>
-                {this.props.count}
+                Name: {this.props.name}
+                <p>{this.props.count}</p>
+
             </div>
         )
     }
@@ -37,13 +39,21 @@ class Comp2 extends React.Component{
         return (
             <div>
                 <p>Comp2</p>
-                {this.props.count}
+                Name: {this.props.name}
+                <p>{this.props.count}</p>
             </div>
         )
     }
 }
+Comp1.propTypes = {
+    name: React.PropTypes.string,
+    count: React.PropTypes.number.isRequired
+}
+Comp1.defaultProps = {
+    name: 'GI Joe'
+}
 let WrappedComp1 = HOCGen(Comp1, {count: 0})
-let WrappedComp2 = HOCGen(Comp2, {count: 100})
+let WrappedComp2 = HOCGen(Comp2, {name: 'bill', count: 100})
 
 class App extends React.Component{
     constructor(props){

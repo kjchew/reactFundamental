@@ -58,6 +58,7 @@ export default class AddProfile extends React.Component {
     }
 
     clearAndFocus(){
+        console.log(`b4 clear and focus, value: ${this.refs.inputBox.value}`)
         this.setState({
             input: ''
         }, () => {

@@ -9,4 +9,10 @@ let Profile = props => (
         </ul>
     </div>
 )
+Profile.propTypes ={
+    name: React.PropTypes.string,
+    age: React.PropTypes.number,
+    bio: React.PropTypes.string,
+    hobbies: React.PropTypes.array
+}
 export default Profile

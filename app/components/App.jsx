@@ -26,10 +26,11 @@ export default class App extends React.Component{
     }
 
     render (){
-        let profiles = this.state.profiles.map(profile => {
+        let profiles = this.state.profiles.map((profile,idx) => {
             return (
                 <Profile
                     name = {profile.name}
+                    key= {idx}
                     age = {profile.age}
                     bio = {profile.bio}
                     hobbies = {profile.hobbies}
